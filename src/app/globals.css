@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --brand-midnight: #17162E;
+    --deep-surface: #22213F;
+    --primary-violet: #7667F7;
+    --primary-violet-hover: #6051E8;
+    --light-violet: #EAE7FF;
+    --warm-ivory: #F8F7F2;
+    --white-surface: #FFFFFF;
+    --primary-text: #25243A;
+    --secondary-text: #6F6D82;
+    --border-color: #E7E5EF;
+    --success-emerald: #16856B;
+    --warning-amber: #A96513;
+    --error-ruby: #C43D50;
+
+    --bg-main: #F8F7F2;
+    --card-bg: #FFFFFF;
+    --sidebar-bg: #17162E;
+    --sidebar-text: #EAE7FF;
+  }
+
+  .dark {
+    --bg-main: #111022;
+    --card-bg: #1B1A33;
+    --white-surface: #1B1A33;
+    --primary-text: #F3F2FA;
+    --secondary-text: #A19FB6;
+    --border-color: #2D2B4A;
+    --sidebar-bg: #131226;
+  }
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--primary-text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  min-height: 100vh;
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(118, 103, 247, 0.25);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(118, 103, 247, 0.45);
+}
+
+/* Glassmorphism Accents */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(231, 229, 239, 0.8);
+}
+
+.dark .glass-panel {
+  background: rgba(27, 26, 51, 0.85);
+  border-color: rgba(45, 43, 74, 0.8);
+}
+
+/* Glow effects */
+.violet-glow {
+  box-shadow: 0 0 25px -5px rgba(118, 103, 247, 0.35);
+}
